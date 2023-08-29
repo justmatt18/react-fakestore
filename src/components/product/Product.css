@@ -1,0 +1,12 @@
+.btn-floating i {
+    background-color: #017481 !important;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-price {
+    font-size: 1.1rem;
+}

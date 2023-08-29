@@ -1,11 +1,18 @@
 .react-store {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+/* body {
   padding: 0;
   margin: 0;
+} */
+/*
+  #00100F, #072F2E, #017481, #0092A2, #85B7B6
+*/
+.primary-bg {
+  background-color: #00100F;
+}
+
+.secondary-bg {
+  background-color: #072F2E;
 }

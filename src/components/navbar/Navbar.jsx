@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="deep-purple darken-1">
+            <nav className="primary-bg">
                 <div className="nav-wrapper container">
                     <Link to="/" className="brand-logo">
                         FakeStore
