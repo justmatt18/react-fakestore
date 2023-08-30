@@ -14,5 +14,15 @@
 }
 
 .secondary-bg {
-  background-color: #072F2E;
+  background-color: #FF6E1E !important;
+}
+
+.tertiary-bg {
+  background-color: #017481;
+  color: #85B7B6
+}
+
+.py-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
