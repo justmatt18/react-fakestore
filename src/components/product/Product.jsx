@@ -2,6 +2,7 @@
 import { ShopContext } from "../../context/ShopContextProvider";
 import { useContext } from "react";
 import "./Product.css";
+import M from "materialize-css";
 
 const Product = (props) => {
     const { id, image, title, price, description } = props.product;
@@ -19,6 +20,7 @@ const Product = (props) => {
                     <button
                         className="btn-floating halfway-fab waves-effect waves-light deep-orange accent-3"
                         onClick={() => {
+                            M.toast({ html: `${title} added to cart` });
                             addToCart(id);
                             console.log(
                                 `${title}, added to cart with ID: ${id}`
