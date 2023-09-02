@@ -10,21 +10,8 @@ const CartItem = (props) => {
     return (
         <div className="row cart-item card">
             <div className="col s6">
-                <div className="row">
-                    {/* <div className="col s1">
-                        <form action="#">
-                            <p>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        className="filled-in"
-                                    />
-                                    <span>Filled in</span>
-                                </label>
-                            </p>
-                        </form>
-                    </div> */}
-                    <div className="col s4">
+                <div className="row center-align">
+                    <div className="col s4 product-img">
                         <img
                             src={image}
                             alt={title}
@@ -32,16 +19,18 @@ const CartItem = (props) => {
                         />
                     </div>
                     <div className="col s8 truncate">
-                        <p>{title}</p>
-                        <p className="truncate">{description}</p>
+                        <p className="product-title truncate">{title}</p>
+                        <p className="">{description}</p>
                     </div>
                 </div>
             </div>
             <div className="col s6">
                 <div className="row center-align">
                     <div className="col s6">
-                        <p>Price</p>
-                        <p>{price}</p>
+                        <p>
+                            <b></b>Price
+                        </p>
+                        <p className="product-price">{price}</p>
                     </div>
                     <div className="col s6">
                         <p>Quantity</p>

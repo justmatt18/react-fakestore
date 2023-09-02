@@ -32,3 +32,13 @@ body {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #f57224;
+}
