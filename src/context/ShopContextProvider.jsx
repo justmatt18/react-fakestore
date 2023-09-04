@@ -37,12 +37,6 @@ const ShopContextProvider = (props) => {
         return data;
     };
 
-    // const isCartEmpty = () => {
-    //     const cart = cartItems.some((item) => cartItems[item] > 0);
-    //     console.log(cart);
-    //     return cart;
-    // };
-
     const addToCart = (itemId) => {
         setCartItems((prevState) => ({
             ...prevState,
@@ -50,7 +44,7 @@ const ShopContextProvider = (props) => {
         }));
     };
 
-    const removeToCart = (itemId) => {
+    const removeFromCart = (itemId) => {
         setCartItems((prevState) => ({
             ...prevState,
             [itemId]: prevState[itemId] - 1,
@@ -82,7 +76,7 @@ const ShopContextProvider = (props) => {
         cartItems,
         addToCart,
         getAllProducts,
-        removeToCart,
+        removeFromCart,
         getSingleProduct,
         updateCartItemQuantity,
         getTotalCartAmount,

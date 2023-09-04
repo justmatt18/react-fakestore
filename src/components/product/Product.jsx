@@ -22,9 +22,6 @@ const Product = (props) => {
                         onClick={() => {
                             M.toast({ html: `${title} added to cart` });
                             addToCart(id);
-                            console.log(
-                                `${title}, added to cart with ID: ${id}`
-                            );
                         }}
                     >
                         <i className="material-icons">add_shopping_cart</i>

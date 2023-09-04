@@ -41,4 +41,5 @@ body {
 .product-price {
   font-size: 1.1rem;
   color: #f57224;
+  font-weight: 500;
 }

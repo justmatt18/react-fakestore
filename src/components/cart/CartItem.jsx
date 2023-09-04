@@ -6,7 +6,8 @@ import { ShopContext } from "../../context/ShopContextProvider";
 const CartItem = (props) => {
     // eslint-disable-next-line react/prop-types
     const { id, title, price, description, image } = props.product;
-    const { addToCart, removeToCart } = useContext(ShopContext);
+    const { addToCart, removeFromCart, updateCartItemQuantity } =
+        useContext(ShopContext);
     return (
         <div className="row cart-item card">
             <div className="col s6">
@@ -28,34 +29,39 @@ const CartItem = (props) => {
                 <div className="row center-align">
                     <div className="col s6">
                         <p>
-                            <b></b>Price
+                            <b>Price</b>
                         </p>
                         <p className="product-price">{price}</p>
                     </div>
                     <div className="col s6">
                         <p>Quantity</p>
-                        <div className="item-quantity">
-                            <button
-                                onClick={() => {
-                                    addToCart(id);
-                                    console.log(
-                                        `${title}, added to cart with ID: ${id}`
-                                    );
-                                }}
-                            >
-                                +
-                            </button>
-                            {props.quantity}
-                            <button
-                                onClick={() => {
-                                    removeToCart(id);
-                                    console.log(
-                                        `new quantity: ${props.quantity}`
-                                    );
-                                }}
-                            >
-                                -
-                            </button>
+                        <div className="countHandler center-align">
+                            <div className="div col s12 m1 offset-m2">
+                                <button onClick={() => removeFromCart(id)}>
+                                    -
+                                </button>
+                            </div>
+                            <div className="col s12 m4">
+                                <input
+                                    type="number"
+                                    value={props.quantity}
+                                    onChange={(e) => {
+                                        let min = 1;
+                                        let max = 250;
+                                        const value = Math.max(
+                                            min,
+                                            Math.min(
+                                                max,
+                                                Number(e.target.value)
+                                            )
+                                        );
+                                        updateCartItemQuantity(id, value);
+                                    }}
+                                />
+                            </div>
+                            <div className="div col s12 m1">
+                                <button onClick={() => addToCart(id)}>+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
